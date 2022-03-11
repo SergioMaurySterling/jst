@@ -58,8 +58,17 @@ someObject3 = {
   }
 }
 
+someObject4 = {
+  innerOne: {
+      uuid:25,
+      someKey: 'someValue',
+      innerTwo: {}
+  }
+}
+
 test('path working correctly', function(){
   expect(JSON.stringify(path(someObject1, 'uuid'))).toEqual(`[["",1],["innerTwo",2],["innerTwo/innerThree/innerFour",3]]`)
   expect(JSON.stringify(path(someObject2, 'uuid'))).toEqual(`[["innerThree",1],["innerThree/innerFour/innerFive",2]]`)
   expect(JSON.stringify(path(someObject3, 'uuid'))).toEqual(`[["innerOne",1],["innerTwo",2],["innerThree",3],["innerThree/innerFour",4],["innerThree/innerFour/innerFive",5],["innerSix",6]]`)
+  expect(JSON.stringify(path(someObject4, 'uuid'))).toEqual(`[["innerOne",25]]`)
 })
