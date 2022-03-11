@@ -14,6 +14,3 @@ const sum  = function (a) {
 }
 
 module.exports = sum;
-// sum(2)(result=> {console.log('->: ',result)})
-// sum(2)(2)(result=> {console.log('->: ',result)})
-// sum(2)(9)(result=> {console.log('->: ',result)})
