@@ -1,3 +1,5 @@
+//Point 3
+
 const
     path = (object, key) => Object
         .entries(object)
@@ -21,4 +23,6 @@ const
             }
         }
     }
-console.log(new Map(path(someObject, 'uuid')))
+
+module.exports(path)
+// console.log(new Map(path(someObject, 'uuid')))
